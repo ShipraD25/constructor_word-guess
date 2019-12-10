@@ -1,0 +1,23 @@
+{
+  "name": "constructor_word-guess",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShipraD25/constructor_word-guess.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShipraD25/constructor_word-guess/issues"
+  },
+  "homepage": "https://github.com/ShipraD25/constructor_word-guess#readme",
+  "dependencies": {
+    "inquirer": "^7.0.0"
+  }
+}
