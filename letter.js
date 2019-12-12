@@ -1,22 +1,24 @@
-var Letter = function(value) {
-    this.value = value;
+let Letter = function(letter) {
+    this.letter = letter;
     this.guessed = false;
-    this.show = function() {
+
+    //method checks the 'guessed' property and returns either an _ or letter based on the 'guessed' value
+    this.displayLetter = function() {
         if (this.guessed) {
-            return this.value;
+            return this.letter + " ";
         } else {
-            return "_";
+            return "_ ";
+        };
+    };
+
+    //if the guessed letter matches the 'letter' value, then we change the 'guessed' value of the Letter object to 'true'.
+    this.checkGuess = function(guess) {
+        if (guess === this.letter) {
+            this.guessed = true;
         }
-    }
 
-    this.checker = function(input) {
+    };
+};
 
-        if (input === this.value) {
-            this.guessed = "true";
-            return true;
-        }
-    }
-
-}
-
+//Exporting the constructor to the Word.js file.
 module.exports = Letter;

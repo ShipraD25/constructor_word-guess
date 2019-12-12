@@ -14,7 +14,7 @@ At this version we are trying to guess different countries in the world.
 - Javascript
 - Npmjs packages: **inquirer** to handle the prompt with the users
 ## Comments about this work?
-First time using constructors, the integration of constructors and objects helped to build more robust solution than previous homework projctes, control cities multi word was a couple of code lines, validation of inputs, etc. The project works with two constructors:
+First time using constructors, the integration of constructors and objects helped to build more robust solution than previous homework projctes, control countries multi word was a couple of code lines, validation of inputs, etc. The project works with two constructors:
 - Letter.js: Contains the constructor, Letter. This constructor is  able to either display an underlying character or a blank placeholder (such as an underscore), depending on whether or not the user has guessed the letter. The constructor includes:
     - A string value to store the underlying character for the letter
     A boolean value that stores whether that letter has been guessed yet
