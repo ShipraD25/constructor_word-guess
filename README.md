@@ -1,6 +1,5 @@
 # constructor_word-guess
 
-# Constructor-Word-Guess
 Word Guess is a Node Game Application based on commands. 
 At this version we are trying to guess different countries in the world.
 
@@ -11,7 +10,6 @@ At this version we are trying to guess different countries in the world.
 #### Go to npmjs if you want to know more about:
 1. **inquirer**: https://www.npmjs.com/package/inquirer
 ## Built With
-- Html
 - Nodejs
 - Javascript
 - Npmjs packages: **inquirer** to handle the prompt with the users
@@ -22,7 +20,7 @@ First time using constructors, the integration of constructors and objects helpe
     A boolean value that stores whether that letter has been guessed yet
     - A function that returns the underlying character if the letter has been guessed, or a placeholder (like an underscore) if the letter has not been guessed
     - A function that takes a character as an argument and checks it against the underlying character, updating the stored boolean value to true if it was guessed correctly
-- Word.js: Contains the constructor, Word that depends on the Letter constructor. This is used to create an object representing the words (cities name in this case) the user is attempting to guess. The constructor includes:
+- Word.js: Contains the constructor, Word that depends on the Letter constructor. This is used to create an object representing the words (countries name in this case) the user is attempting to guess. The constructor includes:
     - An array of new Letter objects representing the letters of the underlying word
     - A function that returns a string representing the word. This should call the function on each letter object (the first function defined in Letter.js) that displays the character or an underscore and concatenate those together.
     - A function that takes a character as an argument and calls the guess function on each letter object (the second function defined in Letter.js)
