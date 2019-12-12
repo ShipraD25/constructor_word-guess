@@ -1,13 +1,13 @@
 //This file requires access to the Letter.js file
-let Letter = require("./Letter.js");
+var Letter = require("./Letter.js");
 
 //Our word constructor
-let Word = function(word) {
+var Word = function(word) {
 
-    //Each Word constructor creates an array of Letter objects for each letter in the word.
+
     this.lettersArr = [];
 
-    for (let i = 0; i < word.length; i++) {
+    for (var i = 0; i < word.length; i++) {
         if (word.charAt(i) === " ") {
             this.lettersArr.push(" ");
         } else {
@@ -18,7 +18,7 @@ let Word = function(word) {
     //Method that utilizes the displayLetter() method in each Letter object in the Word object and returns
     //what the user will see in the game based on which letters are guessed correctly in the hidden word.
     this.createString = function() {
-        let wordString = "";
+        var wordString = "";
 
         this.lettersArr.forEach(function(element) {
             if (element === " ") {
@@ -31,8 +31,7 @@ let Word = function(word) {
     }
 
 
-    //When a letter is guessed, the Word object checks each Letter object in its array and changes the guessed value to true
-    //if the letter is correct.
+
     this.checkGuessWord = function(letterGuess) {
         this.lettersArr.forEach(function(element) {
 

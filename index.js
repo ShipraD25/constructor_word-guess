@@ -1,26 +1,26 @@
 //This file depends on the Word.js file which gives us the Word constructor
-let Word = require("./Word.js");
+var Word = require("./Word.js");
 
-//Going to use the Inquirer.js NPM to get the user's input.
-let inquire = require("inquirer");
+//Going to use the inquirer.js NPM to get the user's input.
+var inquirer = require("inquirer");
 
 //Our list of words that will be randomly picked.
-const wordArray = ["INDIA", "USA", "JAPAN", "CANADA", "ITALY", "EUROPE", "IRAN"]
+var wordArray = ["INDIA", "USA", "JAPAN", "CANADA", "ITALY", "EUROPE", "IRAN"]
 
 //We only want letters as input. No special characters, empty spaces, or numbers.
-const letters = /[a-zA-Z]/;
+var letters = /[a-zA-Z]/;
 
 
 //The number of incorrect tries the player gets to have. We will initialize this value in the playGame() function so it can be set
 //to 10 when a new game starts.
-let numGuesses;
+var numGuesses;
 
 //This function creates a new game with a new word.
 function playGame() {
 
-    let newWord = wordArray[Math.floor(Math.random() * wordArray.length)]
+    var newWord = wordArray[Math.floor(Math.random() * wordArray.length)]
         //First we pick our new word randomly from the word array
-    let word = new Word(newWord);
+    var word = new Word(newWord);
 
     //The user gets 10 incorrect tries before the game is over.
     numGuesses = 10;
@@ -36,9 +36,9 @@ function playGame() {
 //or the user runs out of incorrect attempts. 
 function guessWord(guess, actual) {
 
-    let letterWordArr = [];
+    var letterWordArr = [];
     //This array will be used to store boolean values for each letter to see if everything has been guessed correctly
-    let guessArr = [];
+    var guessArr = [];
 
     //Shows the word being guessed, initially as underscores. The underscores will be replaced by letters when they are guessed
     console.log("");
@@ -46,7 +46,7 @@ function guessWord(guess, actual) {
     console.log("");
 
     //Ask for the letter and only letters. We do not want to accept special characters, numbers, or empty spaces.
-    inquire.prompt([{
+    inquirer.prompt([{
         name: "guessLetter",
         message: "Pick a letter.",
         validate: function validateLetter(name) {
@@ -104,7 +104,7 @@ function guessWord(guess, actual) {
             };
 
             //Then ask if the user wants to play again.
-            inquire.prompt([{
+            inquirer.prompt([{
                 type: "confirm",
                 name: "playAgain",
                 message: "Would you like to play again?",

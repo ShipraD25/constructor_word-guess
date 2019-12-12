@@ -1,8 +1,8 @@
-let Letter = function(letter) {
+var Letter = function(letter) {
     this.letter = letter;
     this.guessed = false;
 
-    //method checks the 'guessed' property and returns either an _ or letter based on the 'guessed' value
+
     this.displayLetter = function() {
         if (this.guessed) {
             return this.letter + " ";
