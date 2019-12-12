@@ -10,11 +10,10 @@ var Letter = function(value) {
     }
 
     this.checker = function(input) {
+
         if (input === this.value) {
             this.guessed = "true";
             return true;
-        } else {
-            return false;
         }
     }
 
