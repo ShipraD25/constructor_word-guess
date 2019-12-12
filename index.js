@@ -31,13 +31,12 @@ function playGame() {
 
 };
 
-//The meat of our game. This function handles everything the game should do to take a word, display it as blanks, have the user guess,
-//indicate if the guess is correct or not, etc etc. This function will call itself over and over until either the word is guessed
+//This function handles everything the game should do to take a word, display it as blanks, have the user guess,
+//indicate if the guess is correct. This function will call itself over and over until either the word is guessed
 //or the user runs out of incorrect attempts. 
 function guessWord(guess, actual) {
 
     var letterWordArr = [];
-    //This array will be used to store boolean values for each letter to see if everything has been guessed correctly
     var guessArr = [];
 
     //Shows the word being guessed, initially as underscores. The underscores will be replaced by letters when they are guessed
@@ -58,13 +57,12 @@ function guessWord(guess, actual) {
         }
     }]).then(function(answer) {
 
-        //Converts input to upper case to make things easier to compare. Then we use the constructor methods from Word.js to see if
-        //the letter is in the word being guessed. 
+        //Converts input to upper case to make things easier to compare. Then we use the constructor methods from Word.js
         guess.checkGuessWord(answer.guessLetter.toUpperCase());
 
         //We want to get the boolean value for each Letter object in the Word so we can see if there are any false values. If there are
         //then the word is still being guessed on. Also, we want to get all the letters in the word so that we can see if the letter
-        //is in the word. The checkGuessWord function above does not do that (though it could be written as if it was).
+        //is in the word. The checkGuessWord function above does not do that.
         guess.lettersArr.forEach(function(element) {
 
             letterWordArr.push(element.letter);
@@ -103,7 +101,6 @@ function guessWord(guess, actual) {
                 console.log("");
             };
 
-            //Then ask if the user wants to play again.
             inquirer.prompt([{
                 type: "confirm",
                 name: "playAgain",
@@ -123,5 +120,5 @@ function guessWord(guess, actual) {
     });
 };
 
-//Start the game when the file is called in the terminal
+
 playGame();
