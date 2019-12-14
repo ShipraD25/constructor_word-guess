@@ -8,37 +8,31 @@ var Word = function(word) {
     this.lettersArr = [];
 
     for (var i = 0; i < word.length; i++) {
-        if (word.charAt(i) === " ") {
-            this.lettersArr.push(" ");
-        } else {
-            this.lettersArr.push(new Letter(word.charAt(i)));
-        };
+        this.lettersArr.push(new Letter(word.charAt(i)));
     };
 
     //Method that utilizes the displayLetter() method in each Letter object in the Word object and returns
     //what the user will see in the game based on which letters are guessed correctly in the hidden word.
-    this.createString = function() {
+    this.displayWord = function() {
         var wordString = "";
 
         this.lettersArr.forEach(function(element) {
-            if (element === " ") {
-                wordString += "  ";
-            } else {
-                wordString += element.displayLetter();
-            }
+            wordString += element.displayLetter();
         });
         return wordString;
     }
 
-
-
     this.checkGuessWord = function(letterGuess) {
+        var allGuessed = true;
         this.lettersArr.forEach(function(element) {
-
             if (element.letter !== undefined) {
-                element.checkGuess(letterGuess);
+                var letterGuessed = element.checkGuess(letterGuess);
+                if (letterGuessed === false) {
+                    allGuessed = false;
+                }
             }
         });
+        return allGuessed;
     };
 };
 

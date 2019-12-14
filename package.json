@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/ShipraD25/constructor_word-guess#readme",
   "dependencies": {
+    "hashset": "0.0.6",
     "inquirer": "^7.0.0"
   }
 }
