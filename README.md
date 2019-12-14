@@ -4,7 +4,7 @@ Word Guess is a Node Game Application based on commands.
 In this version we are trying to guess different countries in the world.
 
 ### App-Demo
-![app-demo]https://media.giphy.com/media/mGUz5tUcwYOiLPVhrn/giphy.gif
+![app-demo](https://media.giphy.com/media/mGUz5tUcwYOiLPVhrn/giphy.gif)
 
 ## Getting Started
 #### These instructions will get you a copy of the project up and running on your local machine.
@@ -59,4 +59,4 @@ var Word = function(word) {
 - index.js: The file contains the logic for the course of the game, which depends on Word.js and:
     - Randomly selects a word and uses the Word constructor to store it
     - Prompts the user for each guess and keeps track of the user's remaining guesses.
-    
+
