@@ -16,6 +16,7 @@ In this version we are trying to guess different countries in the world.
 - Nodejs
 - Javascript
 - Npmjs packages: **inquirer** to handle the prompt with the users
+                  **hashset** to have no repetions in the array.
 ## How this work?
  The integration of constructors and objects helped to build more robust solution than previous homework projctes. The project works with two constructors:
 - Letter.js: Contains the constructor, Letter. This constructor is  able to either display an underlying character or a blank placeholder (such as an underscore), depending on whether or not the user has guessed the letter. The constructor includes:
@@ -60,5 +61,5 @@ var Word = function(word) {
     - Randomly selects a word and uses the Word constructor to store it
     - Prompts the user for each guess and keeps track of the user's remaining guesses.
 
-    
+
 
